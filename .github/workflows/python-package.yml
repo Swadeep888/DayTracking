@@ -34,10 +34,11 @@ jobs:
         python dataGenerator.py
 
     - name: Commit and push changes
+      env: ACTIONS_PAT: ${{ secrets.ACTIONS_PAT }}
       run: |
         git config --global user.name "Swadeep888"
         git config --global user.email "swa.deep@outlook.com"
         dir 
         git add *.csv
         git commit -m "Update CSV file with new data"
-        git push origin main
+        git push https://x-access-token:${{ secrets.ACTIONS_PAT }}@github.com/DayTracking.git main
