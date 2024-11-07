@@ -42,4 +42,4 @@ jobs:
         dir 
         git add *.csv
         git commit -m "Update CSV file with new data"
-        git push https://x-access-token:${{ secrets.ACTIONS_PAT }}@github.com/DayTracking.git main
+        git push https://x-access-token:${{ secrets.ACTIONS_PAT }}@github.com/Swadeep888/DayTracking.git main
