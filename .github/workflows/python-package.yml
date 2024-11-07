@@ -34,7 +34,8 @@ jobs:
         python dataGenerator.py
 
     - name: Commit and push changes
-      env: ACTIONS_PAT: ${{ secrets.ACTIONS_PAT }}
+      env: 
+        ACTIONS_PAT: ${{ secrets.ACTIONS_PAT }}
       run: |
         git config --global user.name "Swadeep888"
         git config --global user.email "swa.deep@outlook.com"
