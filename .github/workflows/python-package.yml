@@ -37,8 +37,7 @@ jobs:
       env: 
         ACTIONS_PAT: ${{ secrets.ACTIONS_PAT }}
       run: |
-        git init 
-        git remote add origin https://github.com/Swadeep888/DayTracking.git
+        
         git config --global user.name "Swadeep888"
         git config --global user.email "swa.deep@outlook.com"
         dir 
