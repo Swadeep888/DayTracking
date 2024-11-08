@@ -59,9 +59,9 @@ jobs:
       env: 
         ACTIONS_PAT: ${{ secrets.ACTIONS_PAT }}
       run: |
-        git config --global user.name "Swadeep888"
-        git config --global user.email "swa.deep@outlook.com"
-        git remote add origin https://x-access-token:${{ secrets.ACTIONS_PAT }}@github.com/Swadeep888/DayTracking.git
+        # git config --global user.name "Swadeep888"
+        # git config --global user.email "swa.deep@outlook.com"
+        # git remote add origin https://x-access-token:${{ secrets.ACTIONS_PAT }}@github.com/Swadeep888/DayTracking.git
         git pull https://x-access-token:${{ secrets.ACTIONS_PAT }}@github.com/Swadeep888/DayTracking.git main
         dir 
         git add *.csv
