@@ -1,14 +1,13 @@
 name: Python package
 
 on:
-  push: 
-    branches: [ "main" ] 
-  pull_request: 
-    branches: [ "main" ]
+   schedule:
+      - cron: '*/5 * * * *'
+  # push: 
+  #   branches: [ "main" ] 
+  # pull_request: 
+  #   branches: [ "main" ]
 
-  schedule:
-    - cron: "0/3 * * * * "
-    
 permissions: 
     contents: write
 
