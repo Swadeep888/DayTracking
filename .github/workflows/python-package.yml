@@ -37,6 +37,20 @@ jobs:
       run: |
         python dataGenerator.py
 
+  
+    - name: Set up Git repository 
+      env: 
+        ACTIONS_PAT: ${{ secrets.ACTIONS_PAT }} 
+      run: | 
+        git init 
+        git remote add origin https://x-access-token:${{ secrets.ACTIONS_PAT }}@github.com/Swadeep888/DayTracking.git 
+    - name: Pull latest changes 
+      env: 
+          ACTIONS_PAT: ${{ secrets.ACTIONS_PAT }} 
+      run: | 
+          git pull https://x-access-token:${{ secrets.ACTIONS_PAT }}@github.com/Swadeep888/DayTracking.git main 
+          
+
     - name: Commit and push changes
       env: 
         ACTIONS_PAT: ${{ secrets.ACTIONS_PAT }}
