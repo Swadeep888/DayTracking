@@ -1,10 +1,10 @@
 name: Python package
 
 on:
-  push: 
-    branches: [ "main" ] 
-  pull_request: 
-    branches: [ "main" ]
+  # push: 
+  #   branches: [ "main" ] 
+  # pull_request: 
+  #   branches: [ "main" ]
 
   schedule:
     - cron: "0 * * * * "
@@ -59,9 +59,9 @@ jobs:
       env: 
         ACTIONS_PAT: ${{ secrets.ACTIONS_PAT }}
       run: |
-        
         git config --global user.name "Swadeep888"
         git config --global user.email "swa.deep@outlook.com"
+        git pull https://x-access-token:${{ secrets.ACTIONS_PAT }}@github.com/Swadeep888/DayTracking.git main
         dir 
         git add *.csv
         git commit -m "Update CSV file with new data"
